@@ -12,11 +12,44 @@
         <h1 class="text-center">Yu-Gi-Oh Card Finder</h1>
         <div class="input-group mb-4">
             <input type="text" class="form-control" id="searchInput" placeholder="Digite o nome da carta">
-            <button type="button" class="btn btn-primary" onclick="searchCards()">Procurar</button>
-            <button id="loadBackBtn" class="btn btn-success" onclick="loadBackCards()">Anterior</button>
-            <button id="loadMoreBtn" class="btn btn-success" onclick="loadMoreCards()">Próximo</button>
-            <button type="button" class="btn btn-secondary" onclick="resetSearch()">Reset</button>
+            <button type="button" class="btn btn-outline-primary" onclick="searchCards()">Procurar</button>
+            <!-- <button id="loadBackBtn" class="btn btn-success" onclick="loadBackCards()">Anterior</button>
+            <button id="loadMoreBtn" class="btn btn-success" onclick="loadMoreCards()">Próximo</button> -->
+            <button type="button" class="btn btn-outline-danger" onclick="resetSearch()">Reset</button>
         </div>
+        <div class="input-group mb-4">
+            <input type="text" class="form-control" id="searchDescInput" placeholder="Procurar por descrição">
+            <button type="button" class="btn btn-outline-primary" onclick="searchDescCards()">Procurar</button>
+            <button type="button" class="btn btn-outline-danger" onclick="resetSearch()">Reset</button>
+        </div>
+        <!-- <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Tipo de cartas
+            </button>
+
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+
+            </div>
+        </div> -->
+        
+
+
+        <!-- <button type="button" class="btn btn-primary">Ritual Monsters</button>
+        <button type="button" class="btn btn-secondary">Tokens</button>
+        <button type="button" class="btn btn-success">SpellCards</button>
+        <button type="button" class="btn btn-danger">TrapCards</button>
+        <button type="button" class="btn btn-warning">Normal Monsters</button>
+        <button type="button" class="btn btn-info">Link Monsters</button>
+        <button type="button" class="btn btn-light">Pendulum Monster</button>
+        <button type="button" class="btn btn-dark">XYZ Monsters</button> -->
+
+        <div class="d-flex flex-wrap justify-content-center">
+            <button id="loadBackBtn" class="btn btn-outline-success" onclick="loadBackCards()">Anterior</button>
+            <button id="loadMoreBtn" class="btn btn-outline-success" onclick="loadMoreCards()">Próximo</button>
+        
         <div id="result" class="d-flex flex-wrap justify-content-center"></div>
         <div class="text-center mt-4">
             <button id="loadMoreBtn" class="btn btn-success" onclick="loadMoreCards()">Próximo</button>

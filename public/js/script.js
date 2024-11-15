@@ -1,8 +1,8 @@
-let currentLimit = 32;
+let currentLimit = 60;
 let offset = 0;
 let allCards = [];
 
-async function fetchCards(limit = 30, offset = 0) {
+async function fetchCards(limit = 60, offset = 0) {
     try {
         const response = await fetch('https://db.ygoprodeck.com/api/v7/cardinfo.php')
         const data = await response.json();
@@ -49,6 +49,7 @@ function searchCards() {
 
 function resetSearch(){
     document.getElementById('searchInput').value = '';
+    document.getElementById('searchDescInput').value = '';
     offset = 0;
     fetchCards(currentLimit, offset);
 }
@@ -82,3 +83,12 @@ function loadBackCards() {
     displayCards(backCards)
     
 }
+
+function searchDescCards() {
+    const input = document.getElementById('searchDescInput').value.toLowerCase();
+    const filteredCards = allCards.filter(card => card.desc.toLowerCase().includes(input));
+
+    displayCards(filteredCards);
+
+}
+
